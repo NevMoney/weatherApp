@@ -28,7 +28,6 @@ function getIconUrl(iconCode) {
 }
 
 function renderCurrentWeather(current) {
-  console.log('current', current)
   let sunset = new Date(current.sunset[0] * 1000)
   sunset = sunset.toLocaleTimeString('en-US', {
     hour: 'numeric',
@@ -57,7 +56,6 @@ function renderCurrentWeather(current) {
     // hide class degrees-fl
     document.querySelector('.degrees-fl').classList.add('hidden')
   }
-  setValue('current-wd', current.windDirection)
   setValue('current-sunrise', sunrise)
   setValue('current-sunset', sunset)
 }
@@ -77,7 +75,6 @@ function renderDailyWeather(daily) {
 }
 
 function renderHourlyWeather(hourly) {
-  console.log('hourly', hourly)
   const hourlySection = document.querySelector('[data-hour-section]')
   const hourRowTemplate = document.getElementById('hour-row-template')
   const HOUR_FORMAT = new Intl.DateTimeFormat(undefined, { hour: 'numeric' })
@@ -124,6 +121,5 @@ getLocation()
 // use current weather windSpeed and windDirection to create a wind arrow
 function windArrow(windDirection) {
   const windArrow = document.querySelector('[data-wind-arrow]')
-  console.log('windDirection', windDirection)
   windArrow.style.transform = `translate(-10%, 11%) rotate(${windDirection}deg)`
 }

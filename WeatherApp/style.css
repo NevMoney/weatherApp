@@ -57,13 +57,25 @@ body {
   margin-left: 1rem;
 }
 
-.header-right {
+.header-center {
   display: grid;
-  width: 50%;
+  width: 60%;
   justify-content: space-around;
-  gap: 0.5rem;
+  gap: 1rem;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  border-right: 2px solid hsl(200, 100%, 10%);
+  height: 6rem;
   grid-template-columns: repeat(4, auto);
   grid-template-rows: repeat(2, auto);
+}
+
+.header-right {
+  display: flex;
+  width: 30%;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
 }
 
 .info-group {

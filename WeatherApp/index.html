@@ -21,6 +21,7 @@
       <span id="location">Location</span>
       Weather
     </h1>
+
     <header class="header">
       <!-- top left -->
       <div class="header-left">
@@ -35,8 +36,8 @@
         </div>
       </div>
 
-      <!-- top right -->
-      <div class="header-right">
+      <!-- top center -->
+      <div class="header-center">
         <div class="info-group">
           <div class="label">High</div>
           <div>
@@ -52,33 +53,16 @@
           </div>
         </div>
         <div class="info-group">
+          <div class="label">Sunrise</div>
+          <div>
+            <span data-current-sunrise>7 AM</span>
+          </div>
+        </div>
+        <div class="info-group">
           <div class="label">Precip</div>
           <div>
             <span data-current-precip>0.1</span>
             <span class="value-sub-info">in</span>
-          </div>
-        </div>
-        <div class="info-group">
-          <!-- combine win and wind direction into one where it shows the wind direction and inserts speed in the middle -->
-          <div class="label">Wind</div>
-
-          <div class="compass">
-            <div class="arrow" data-wind-arrow></div>
-            <div class="compass-circle">
-              <span id="number" data-current-wind>
-                13
-              </span>
-              <span id="windNumber" class="value-sub-info">mph</span>
-            </div>
-            <div class="my-point"></div>
-          </div>
-        </div>
-        <!-- create compass -->
-        <div class="info-group">
-          <div class="label">Wind Dir</div>
-          <div>
-            <span data-current-wd>10</span>
-            <span class="value-sub-info">&deg;</span>
           </div>
         </div>
         <div class="info-group">
@@ -95,18 +79,29 @@
             &deg;
           </div>
         </div>
-        <div class="info-group">
-          <div class="label">Sunrise</div>
-          <div>
-            <span data-current-sunrise>7 AM</span>
-            <!-- <span class="value-sub-info">&percnt;</span> -->
-          </div>
-        </div>
+
         <div class="info-group">
           <div class="label">Sunset</div>
           <div>
             <span data-current-sunset>4 PM</span>
-            <!-- <span class="value-sub-info">&deg;</span> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- top right -->
+      <div class="header-right">
+        <div class="info-group">
+          <div class="label">Wind</div>
+          <!-- create compass -->
+          <div class="compass">
+            <div class="arrow" data-wind-arrow></div>
+            <div class="compass-circle">
+              <span id="number" data-current-wind>
+                13
+              </span>
+              <span id="windNumber" class="value-sub-info">mph</span>
+            </div>
+            <div class="my-point"></div>
           </div>
         </div>
       </div>
